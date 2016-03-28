@@ -1,0 +1,379 @@
+{
+  "BaseURL": {
+    "SporxBaseURL": "www.sporx.com",
+    "SpoxTvBaseURL": "www.sporxtv.com"
+  },
+  "ApiList": {
+    "GetTodayOnTv": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_tv/tvdebugun.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLastMinuteNews": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_haber/sondakika.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetNewsByCategory": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_haber/kategori.php",
+      "requiredParamList": "catId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetVideos": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_video/video.php",
+      "requiredParamList": "type",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetPhotoGalleries": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_galeri/galeri.php",
+      "requiredParamList": "type",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetSearch": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_arama/ara.php",
+      "requiredParamList": "q",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetAuthorsArticles": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_yazar/yazarlar_sonyazilar_liste.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "SendContactUs": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_feedback/feedback.php",
+      "requiredParamList": "firstName,email,deviceData,suggest",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetFootballLiveScores": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/_skor/futbol_new.php",
+      "requiredParamList": "mStatus",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetFootballLiveScoresV2": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/_skor/futbol_v2.php",
+      "requiredParamList": "mStatus",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetBasketballLiveScores": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/_skor/basketbol_new.php",
+      "requiredParamList": "mStatus",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetFootballLeagueStandings": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_puandurumu/_futbol/puandurumu.php",
+      "requiredParamList": "ligId,type",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetTennisLeagueStandings": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_puandurumu/_tenis/puandurumu.php",
+      "requiredParamList": "tType",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetMotorsportsLeagueStandings": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_motorsporlari/siralama.php",
+      "requiredParamList": "tId,type",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetBasketballLeagueStandings": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_puandurumu/_basketbol/puandurumu.php",
+      "requiredParamList": "tId,type",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentaryTeams": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_takimlar.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentaryGameList": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_listele.php",
+      "requiredParamList": "date,teamId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetHeadlines": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_haber/manset.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetFixture": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_fikstur/fikstur.php",
+      "requiredParamList": "ligId,stageId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetFootballFixture": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_fikstur/_futbol/fikstur.php",
+      "requiredParamList": "ligId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetBasketballFixture": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_fikstur/_basketbol/fikstur.php",
+      "requiredParamList": "ligId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetF1Fixture": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_fikstur/_f1/fikstur_json.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetTeamList": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_kategori/takimliste.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetMyTeamDetail": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_detay/takim_detay.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetNewsDetail": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_detay/haber_detay.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetRelatedNews": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_haber/diger_haberler_json.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetContentComments": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_yorum/yorum.php",
+      "requiredParamList": "cid",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetPhotoGalleryDetail": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_detay/galeri_detay.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveScoresDetail": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/_skor/mac_detay.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentarySummary": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_ozet.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentaryList": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_anlatim.php",
+      "requiredParamList": "macId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentaryLineUp": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_kadro_optimum.php",
+      "requiredParamList": "macId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentaryEvent": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_olaylar.php",
+      "requiredParamList": "macId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentaryEventV2": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_olaylar_v2.php",
+      "requiredParamList": "macId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetLiveCommentaryStatics": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_istatistik.php",
+      "requiredParamList": "macId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "ManOfTheMatchResult": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_macinadami_sonuc.php",
+      "requiredParamList": "macId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "ManOfTheMatchForm": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_macinadami_form.php",
+      "requiredParamList": "macId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "ManOfTheMatchFormSubmit": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_canli/canli_anlatim_macinadami_submit.php",
+      "requiredParamList": "macId,playerId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "LoginSubmit": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_login/login_submit.php",
+      "requiredParamList": "email,password,UDID,mtype",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "FacebookLogin": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_login/facebook_login.php",
+      "requiredParamList": "fbID,UDID,mtype,access_token",
+      "method": "GET",
+      "timeout": "30"
+    },
+    "ContentCommentSubmit": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_yorum/yorum_submit.php",
+      "requiredParamList": "hash,UDID,comment,cid,mtype",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "TokenSend": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_android/tokenSend.php",
+      "requiredParamList": "UDID,regId",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "VideoCount": {
+      "baseURLKey": "SpoxTvBaseURL",
+      "relativePath": "/_ajax/video_cnt_embed.php",
+      "requiredParamList": "id,st",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetBet": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_iddaa/iddaa.php",
+      "requiredParamList": "type",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "DeviceTeamStaticsSend": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_device/device_team_statics_send.php",
+      "requiredParamList": "UDID,teamId",
+      "method": "POST",
+      "timeout": "10"
+    },
+    "GetVideoDetail": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_detay/video_detay.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "CommentLike": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_yorum/yorum_like.php",
+      "requiredParamList": "UDID,hash,mtype,commentId,st",
+      "method": "POST",
+      "timeout": "10"
+    },
+    "ReportComment": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_yorum/yorum_sikayet_submit.php",
+      "requiredParamList": "frm_id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetGalleryNewsDetail": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_detay/galerihaber_detay.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetGalleryNewsHeadlines": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_haber/galerihaber_tepemenu.php",
+      "requiredParamList": "id",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetAdSdkContainer": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_banner/adserver.php",
+      "requiredParamList": "",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetEuropeanCupsGroups": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_fikstur/stage_list.php",
+      "requiredParamList": "ligId,type",
+      "method": "GET",
+      "timeout": "10"
+    },
+    "GetEuropeanCupsActiveIndexes": {
+      "baseURLKey": "SporxBaseURL",
+      "relativePath": "/_json/_fikstur/stage_active.php",
+      "requiredParamList": "ligId,app",
+      "method": "GET",
+      "timeout": "10"
+    }
+  }
+}

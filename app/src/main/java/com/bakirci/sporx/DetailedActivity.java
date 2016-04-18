@@ -1,12 +1,16 @@
 package com.bakirci.sporx;
 
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.util.DisplayMetrics;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -19,6 +23,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -111,9 +117,30 @@ public class DetailedActivity extends AppCompatActivity {
 
         this.news
                 .setBody(Html.fromHtml(response.getString("body")
-                        .replaceAll("[\\t\\n\\r]", "")
-                        .replaceAll("\\<style[^>]*>[\\s\\S]*?</style>", "")
-                        .replaceAll("\\<a[^>]*>[\\s\\S]*?</a>", "")).toString());
+                                .replaceAll("[\\t\\n\\r]", "")
+                                .replaceAll("\\<style[^>]*>[\\s\\S]*?</style>", "")
+                                .replaceAll("\\<a[^>]*>[\\s\\S]*?</a>", ""),
+                new Html.ImageGetter() {
+                    @Override
+                    public Drawable getDrawable(String source) {
+                        Drawable bmp = null;
+                        try {
+                            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                            StrictMode.setThreadPolicy(policy);
+                            bmp = Drawable.createFromStream(new URL(source).openStream(),source);
+                            /**
+                             * Screen metrics to set the width and height of the images
+                             */
+                            DisplayMetrics metrics = new DisplayMetrics();
+                            getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                            int i = (int) (metrics.widthPixels * 0.65);
+                            bmp.setBounds(0, 0, metrics.widthPixels,i);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        return bmp;
+                    }
+                },null));
     }
 
     private void DetailedViewholder() {

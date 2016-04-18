@@ -1,5 +1,7 @@
 package com.bakirci.sporx.Models;
 
+import android.text.Spanned;
+
 import java.util.Date;
 
 /**
@@ -13,7 +15,7 @@ public class NewsDetails implements INews {
     private String imageUrl;
     private Date date;
     private String source;
-    private String body;
+    private Spanned body;
     private String[] category;
 
     public NewsDetails(int id) {
@@ -62,11 +64,11 @@ public class NewsDetails implements INews {
         this.date = date;
     }
 
-    public String getBody() {
+    public Spanned getBody() {
         return body;
     }
 
-    public void setBody(String body) {
+    public void setBody(Spanned body) {
         this.body = body;
     }
 
